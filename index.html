@@ -21,9 +21,9 @@
         <h1><a href="index.html">MyGsu Navigator</a></h1>
         <nav id="nav">
           <ul>
-            <li><a href="index.html">About</a></li>
-            <li><a href="elements.html">GSU Map</a></li>
-            <li><a href="elements.html">Directions</a></li>
+            <li><a href="#aboutAndKey">About</a></li>
+            <li><a href="#gsuMap">GSU Map</a></li>
+            <li><a href="#directionMap">Directions</a></li>
           </ul>
         </nav>
       </header>
@@ -32,185 +32,191 @@
       <section id="banner">
         <h2>You'll Never Get Lost Again</h2>
       </section>
+      <!-- aboutAndKey -->
+      <div id="aboutAndKey">
+        <div class="wrapper style1">
+          <section class="container">
+            <header class="major">
+              <h2>About</h2>
+              <p>
+                Navigating an unfamiliar campus, especially one as large as
+                Georgia State can be daunting at times. But fear not! MyGsu
+                Navigator is developed to help students find their way around
+                Georgia State University. You can rely on MyGsu Navigator to
+                provide accurate step-by-step directions to classroom buildings,
+                recreation centers, libraries, housing, and dining halls from
+                your current location or another point on campus.
+              </p>
+            </header>
+          </section>
+        </div>
 
-      <!-- One -->
-      <div class="wrapper style1">
-        <section class="container">
-          <header class="major">
-            <h2>About</h2>
-            <p>
-              Navigating an unfamiliar campus, especially one as large as
-              Georgia State can be daunting at times. But fear not! MyGsu
-              Navigator is developed to help students find their way around
-              Georgia State University. You can rely on MyGsu Navigator to
-              provide accurate step-by-step directions to classroom buildings,
-              recreation centers, libraries, housing, and dining halls from your
-              current location or another point on campus.
-            </p>
-          </header>
-        </section>
+        <!-- Key -->
+        <div class="wrapper style2">
+          <section class="container">
+            <header class="major">
+              <h2>Map Key</h2>
+            </header>
+            <div class="keyContainer">
+              <div>
+                <section class="box special">
+                  <i class="icon major alt solid fa-graduation-cap"></i>
+                  <h3>Classroom Building</h3>
+                </section>
+              </div>
+              <div>
+                <section class="box special">
+                  <i class="icon major alt solid fa-utensils"></i>
+                  <h3>Dining Hall</h3>
+                </section>
+              </div>
+              <div>
+                <section class="box special">
+                  <i class="icon major alt solid fa-swimmer"></i>
+                  <h3>Recreation Center</h3>
+                </section>
+              </div>
+              <div>
+                <section class="box special">
+                  <i class="icon major alt solid fa-book-open"></i>
+                  <h3>Library</h3>
+                </section>
+              </div>
+              <div>
+                <section class="box special">
+                  <i class="icon major alt solid fa-home"></i>
+                  <h3>Housing</h3>
+                </section>
+              </div>
+            </div>
+          </section>
+        </div>
       </div>
-
-      <!-- Two -->
-      <div class="wrapper style2">
+      <!-- gsuMap -->
+      <div id="gsuMap" class="wrapper style3">
         <section class="container">
           <header class="major">
-            <h2>Map Key</h2>
-          </header>
-          <div class="keyContainer">
-            <div>
-              <section class="box special">
-                <i class="icon major alt solid fa-graduation-cap"></i>
-                <h3>Classroom Building</h3>
-              </section>
-            </div>
-            <div>
-              <section class="box special">
-                <i class="icon major alt solid fa-utensils"></i>
-                <h3>Dining Hall</h3>
-              </section>
-            </div>
-            <div>
-              <section class="box special">
-                <i class="icon major alt solid fa-swimmer"></i>
-                <h3>Recreation Center</h3>
-              </section>
-            </div>
-            <div>
-              <section class="box special">
-                <i class="icon major alt solid fa-book-open"></i>
-                <h3>Library</h3>
-              </section>
-            </div>
-            <div>
-              <section class="box special">
-                <i class="icon major alt solid fa-home"></i>
-                <h3>Housing</h3>
-              </section>
-            </div>
-          </div>
-        </section>
-      </div>
-
-      <!-- Three -->
-      <div class="wrapper style3">
-        <section class="container">
-          <header class="major">
-            <h2>GSU CAMPUS MAP</h2>
+            <h2><i class="fas fa-map-marked fasImg"></i>GSU CAMPUS MAP</h2>
             <p>Click on icon for details.</p>
           </header>
           <div id="mapImage"></div>
         </section>
       </div>
 
-      <!-- Four -->
-      <div class="wrapper style1">
-        <section class="container medium">
+      <!-- directionMap -->
+      <div id="directionMap" class="wrapper style1">
+        <section class="container">
           <header class="major">
-            <h2>Contact</h2>
-            <p>
-              Aliquet ante lobortis non semper gravida. Accumsan faucibus
-              praesent ante aliquet amet posuere ac cubilia. Eu faucibus mi
-              neque adipiscing mi lorem. Semper blandit. Amet adipiscing
-              interdum.
-            </p>
+            <h2><i class="fas fa-directions fasImg"></i>Directions</h2>
           </header>
-          <div id="contact" class="box">
-            <div class="row gtr-uniform">
-              <div class="col-7 col-12-narrower">
-                <form method="post" action="#">
-                  <div class="row gtr-uniform gtr-50">
-                    <div class="col-12">
-                      <input
-                        type="text"
-                        name="name"
-                        id="name"
-                        placeholder="Name"
-                      />
-                    </div>
-                    <div class="col-12">
-                      <input
-                        type="email"
-                        name="email"
-                        id="email"
-                        placeholder="Email"
-                      />
-                    </div>
-                    <div class="col-12">
-                      <textarea
-                        name="message"
-                        id="message"
-                        placeholder="Message"
-                        rows="7"
-                      ></textarea>
-                    </div>
-                    <div class="col-12">
-                      <ul class="actions">
-                        <li><input type="submit" value="Send" /></li>
-                        <li>
-                          <input type="reset" class="alt" value="Reset" />
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </form>
-              </div>
-              <div class="col-5 col-12-narrower">
-                <ul class="labeled-icons">
-                  <li>
-                    <h3 class="icon solid fa-map-marker-alt">
-                      <span class="label">Address</span>
-                    </h3>
-                    Untitled Corporation<br />
-                    1234 Somewhere Rd. Suite 5432<br />
-                    Nashville, TN 00000-0000
-                  </li>
-                  <li>
-                    <h3 class="icon solid fa-phone">
-                      <span class="label">Phone</span>
-                    </h3>
-                    (000) 000-0000 x1234
-                  </li>
-                  <li>
-                    <h3 class="icon solid fa-envelope">
-                      <span class="label">Email</span>
-                    </h3>
-                    <a href="#">information@untitled.tld</a>
-                  </li>
-                  <li>
-                    <h3 class="icon brands fa-twitter">
-                      <span class="label">Twitter</span>
-                    </h3>
-                    <a href="#">twitter.com/untitled-tld</a>
-                  </li>
-                  <li>
-                    <h3 class="icon brands fa-facebook-f">
-                      <span class="label">Facebook</span>
-                    </h3>
-                    <a href="#">facebook.com/untitled-tld</a>
-                  </li>
-                  <li>
-                    <h3 class="icon brands fa-linkedin-in">
-                      <span class="label">LinkedIn</span>
-                    </h3>
-                    <a href="#">linkedin.com/untitled-tld</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+          <div>
+            <p id="directionText">
+              Travel Options:
+              <select id="travelMode" class="custom-select">
+                <option value="DRIVING">Driving</option>
+                <option value="WALKING" selected>Walking</option>
+              </select>
+            </p>
           </div>
+          <div>
+            <p id="directionText">
+              Directions From:
+              <select id="start" class="custom-select">
+                <option value="userLoc" selected>My Location</option>
+                <optgroup label="Classroom buildings">
+                  <option value="0">Classroom South</option>
+                  <option value="1">Andrew Young School</option>
+                  <option value="2">25 Park Place</option>
+                  <option value="3">Arts & Humanities</option>
+                  <option value="4">Urban Life Building</option>
+                  <option value="5">Petit Science Center</option>
+                  <option value="6">Aderhold Learning Center</option>
+                  <option value="7">Natural Science Center</option>
+                  <option value="8">
+                    J. Mack Robinson College of Business
+                  </option>
+                  <option value="9">Langdale Hall</option>
+                </optgroup>
+                <optgroup label="Rec Center">
+                  <option value="10">Student Recreation Center</option>
+                </optgroup>
+                <optgroup label="Library">
+                  <option value="11">University Library</option>
+                </optgroup>
+                <optgroup label="Dining Halls">
+                  <option value="12">Patton</option>
+                  <option value="13">Piedmont Central</option>
+                  <option value="14">Piedmont North</option>
+                </optgroup>
+                <optgroup label="Housing">
+                  <option value="15">Lofts</option>
+                  <option value="16">Greek</option>
+                  <option value="17">Commons</option>
+                  <option value="17">Central</option>
+                  <option value="17">North</option>
+                </optgroup>
+              </select>
+            </p>
+          </div>
+          <div>
+            <p id="directionText">
+              Directions to:
+              <select id="end" class="custom-select">
+                <optgroup label="Classroom buildings">
+                  <option value="0">Classroom South</option>
+                  <option value="1">Andrew Young School</option>
+                  <option value="2">25 Park Place</option>
+                  <option value="3">Arts & Humanities</option>
+                  <option value="4">Urban Life Building</option>
+                  <option value="5">Petit Science Center</option>
+                  <option value="6">Aderhold Learning Center</option>
+                  <option value="7">Natural Science Center</option>
+                  <option value="8">
+                    J. Mack Robinson College of Business
+                  </option>
+                  <option value="9" selected>Langdale Hall</option>
+                </optgroup>
+                <optgroup label="Rec Center">
+                  <option value="10">Student Recreation Center</option>
+                </optgroup>
+                <optgroup label="Library">
+                  <option value="11">University Library</option>
+                </optgroup>
+                <optgroup label="Dining Halls">
+                  <option value="12">Patton</option>
+                  <option value="13">Piedmont Central</option>
+                  <option value="14">Piedmont North</option>
+                </optgroup>
+                <optgroup label="Housing">
+                  <option value="15">Lofts</option>
+                  <option value="16">Greek</option>
+                  <option value="17">Commons</option>
+                  <option value="17">Central</option>
+                  <option value="17">North</option>
+                </optgroup>
+              </select>
+            </p>
+            <button type="button" id="directionButton">Get Directions</button>
+          </div>
+          <div id="floating-panel"></div>
+          <div id="directionImage"><p id="errorText"></p></div>
+          <div id="right-panel"></div>
         </section>
       </div>
 
       <!-- Footer -->
-      <footer id="footer">
-        <ul class="menu">
-          <li><a href="#">About</a></li>
-          <li><a href="#">Terms of Use</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Contact Us</a></li>
-        </ul>
-        <div class="copyright">&copy; Untitled. All rights reserved.</div>
+      <footer>
+        <p>
+          <span id="contact"
+            ><a href="mailto:contactbnlewis@gmail.com">CONTACT</a></span
+          >
+          |
+          <span id="tp"
+            ><a href="https://policies.google.com/">TERMS & PRIVACY</a></span
+          >
+          <br />
+          © Billy N. Lewis - 2020
+        </p>
       </footer>
     </div>
 

@@ -18,13 +18,13 @@ function initMap() {
     center: coords,
   });
   // create map and center it on Atlanta
-//   *map3 = new google.maps.Map(document.getElementById('directionImage'), {
-//     center: {
-//       lat: 33.749,
-//       lng: -84.388,
-//     },
-//     zoom: 13,
-//   });
+  map3 = new google.maps.Map(document.getElementById('directionImage'), {
+    center: {
+      lat: 33.749,
+      lng: -84.388,
+    },
+    zoom: 13,
+  });
   infoWindow = new google.maps.InfoWindow();
   //directionService is used to get directions. It
   //returns DirectionsResult and a DirectionsStatus.
@@ -36,7 +36,7 @@ function initMap() {
   directionsRenderer.setMap(map3);
   directionsRenderer.setPanel(document.getElementById('right-panel'));
   const control = document.getElementById('floating-panel');
-//   *map3.controls[google.maps.ControlPosition.TOP_CENTER].push(control);
+  map3.controls[google.maps.ControlPosition.TOP_CENTER].push(control);
   markerArray = [
     {
       // classroom south marker
@@ -44,7 +44,7 @@ function initMap() {
         lat: 33.75282,
         lng: -84.387426,
       },
-      icon: './assets/css/images/home.svg',
+      icon: './assets/css/images/class.svg',
       content: '<h3>Classroom South<h3>',
     },
     {
@@ -53,7 +53,7 @@ function initMap() {
         lat: 33.754443,
         lng: -84.390108,
       },
-      icon: './images/cap.svg',
+      icon: './assets/css/images/class.svg',
       content: '<h3>Andrew Young School of Policy<h3>',
     },
     {
@@ -62,7 +62,7 @@ function initMap() {
         lat: 33.75528,
         lng: -84.38803,
       },
-      icon: './images/cap.svg',
+      icon: './assets/css/images/class.svg',
       content: '<h3>Atlanta - 25 Park Place<h3>',
     },
     {
@@ -71,7 +71,7 @@ function initMap() {
         lat: 33.754122,
         lng: -84.386187,
       },
-      icon: './images/cap.svg',
+      icon: './assets/css/images/class.svg',
       content: '<h3>Atlanta - Arts & Humanities<h3>',
     },
     {
@@ -80,7 +80,7 @@ function initMap() {
         lat: 33.75172,
         lng: -84.38563,
       },
-      icon: './images/cap.svg',
+      icon: './assets/css/images/class.svg',
       content: '<h3>Atlanta - Urban Life Building<h3>',
     },
     {
@@ -89,7 +89,7 @@ function initMap() {
         lat: 33.75113,
         lng: -84.38546,
       },
-      icon: './images/cap.svg',
+      icon: './assets/css/images/class.svg',
       content: '<h3>Atlanta - Petit Science Center<h3>',
     },
     {
@@ -98,7 +98,7 @@ function initMap() {
         lat: 33.75634,
         lng: -84.38915,
       },
-      icon: './images/cap.svg',
+      icon: './assets/css/images/class.svg',
       content: '<h3>Helen M. Aderhold Learning Center <h3>',
     },
     {
@@ -107,7 +107,7 @@ function initMap() {
         lat: 33.753757,
         lng: -84.388256,
       },
-      icon: './images/cap.svg',
+      icon: './assets/css/images/class.svg',
       content: '<h3>Atlanta - Natural Science Center <h3>',
     },
     {
@@ -116,7 +116,7 @@ function initMap() {
         lat: 33.755011,
         lng: -84.390246,
       },
-      icon: './images/cap.svg',
+      icon: './assets/css/images/class.svg',
       content: '<h3>Atlanta - J. Mack Robinson College of Business <h3>',
     },
     {
@@ -125,7 +125,7 @@ function initMap() {
         lat: 33.753313,
         lng: -84.387173,
       },
-      icon: './images/cap.svg',
+      icon: './assets/css/images/class.svg',
       content: '<h3>Atlanta - Langdale Hall <h3>',
     },
     {
@@ -134,7 +134,7 @@ function initMap() {
         lat: 33.752064,
         lng: -84.384231,
       },
-      icon: './images/soccer.png',
+      icon: './assets/css/images/swim.svg',
       content: '<h3>Student Recreation Center<h3>',
     },
     {
@@ -143,7 +143,7 @@ function initMap() {
         lat: 33.752621,
         lng: -84.386608,
       },
-      icon: './images/book.svg',
+      icon: './assets/css/images/library.svg',
       content: '<h3>University Library<h3>',
     }, //dining hall section
     {
@@ -152,7 +152,7 @@ function initMap() {
         lat: 33.754641,
         lng: -84.382386,
       },
-      icon: './images/dine.svg',
+      icon: './assets/css/images/food.svg',
       content: '<h3>Patton Dining Hall<h3>',
     },
     {
@@ -161,7 +161,7 @@ function initMap() {
         lat: 33.756964,
         lng: -84.38233,
       },
-      icon: './images/dine.svg',
+      icon: './assets/css/images/food.svg',
       content: '<h3>Piedmont Central Dining Hall<h3>',
     },
     {
@@ -170,7 +170,7 @@ function initMap() {
         lat: 33.759011,
         lng: -84.381276,
       },
-      icon: './images/dine.svg',
+      icon: './assets/css/images/food.svg',
       content: '<h3>Piedmont North Dining Hall<h3>',
     }, //Housing section
     {
@@ -179,7 +179,7 @@ function initMap() {
         lat: 33.754257,
         lng: -84.38369,
       },
-      icon: './images/house.svg',
+      icon: './assets/css/images/home.svg',
       content: '<h3>University Lofts<h3>',
     },
     {
@@ -188,7 +188,7 @@ function initMap() {
         lat: 33.754614,
         lng: -84.383041,
       },
-      icon: './images/house.svg',
+      icon: './assets/css/images/home.svg',
       content: '<h3>Greek Housing<h3>',
     },
     {
@@ -197,7 +197,7 @@ function initMap() {
         lat: 33.757455,
         lng: -84.381982,
       },
-      icon: './images/house.svg',
+      icon: './assets/css/images/home.svg',
       content: '<h3>University Commons<h3>',
     },
     {
@@ -206,7 +206,7 @@ function initMap() {
         lat: 33.757031,
         lng: -84.382816,
       },
-      icon: './images/house.svg',
+      icon: './assets/css/images/home.svg',
       content: '<h3>Piedmont Central<h3>',
     },
     {
@@ -215,7 +215,7 @@ function initMap() {
         lat: 33.75923,
         lng: -84.381575,
       },
-      icon: './images/house.svg',
+      icon: './assets/css/images/home.svg',
       content: '<h3>Piedmont North<h3>',
     },
   ];
@@ -240,4 +240,86 @@ function initMap() {
       });
     });
   }
+}
+// -----------
+// DIRECTIONS
+const directionButton = document.getElementById('directionButton');
+directionButton.addEventListener('click', checkDirRequest);
+
+function checkDirRequest() {
+  infoWindow.close();
+  start = document.getElementById('start').value;
+  //if user request direction from their location, call userLocation();
+  // else, skip geolocation and call direction();
+  if (start === 'userLoc') {
+    userLocation();
+  } else {
+    direction();
+  }
+}
+
+function userLocation() {
+  var userPos;
+  //get user's current postion/coordinates
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        userPos = new google.maps.LatLng(
+          position.coords.latitude,
+          position.coords.longitude
+        );
+        direction(userPos);
+      },
+      () => {
+        handleLocationError(true, infoWindow, map3.getCenter());
+      }
+    );
+  } else {
+    // Browser doesn't support Geolocation
+    handleLocationError(false, infoWindow, map3.getCenter());
+  }
+}
+function direction(userPos) {
+  onChangeHandler();
+  function onChangeHandler() {
+    calculateAndDisplayRoute(directionsService, directionsRenderer);
+  }
+
+  function calculateAndDisplayRoute(directionsService, directionsRenderer) {
+    if (start === 'userLoc') {
+      start = userPos;
+    } else {
+      start = markerArray[start];
+      start = start.coords;
+    }
+    let end = document.getElementById('end').value;
+    end = markerArray[end];
+    end = end.coords;
+
+    const selectedMode = document.getElementById('travelMode').value;
+
+    directionsService.route(
+      {
+        origin: start,
+        destination: end,
+        travelMode: google.maps.TravelMode[selectedMode],
+      },
+      (response, status) => {
+        if (status === 'OK') {
+          directionsRenderer.setDirections(response);
+        } else {
+          window.alert('Directions request failed due to ' + status);
+        }
+      }
+    );
+  }
+}
+function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+  infoWindow.setPosition(pos);
+  infoWindow.setContent(
+    browserHasGeolocation
+      ? 'OOPS! Unable to get your location. Please give us permission to locate you or start from a point on campus.'
+      : "Error: Your browser doesn't support geolocation."
+  );
+  infoWindow.open(map3);
 }

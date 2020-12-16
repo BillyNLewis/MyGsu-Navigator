@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 #banner {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url('./images/banner.jpg');
@@ -6,12 +9,52 @@
   background-size: cover;
   height: 518px;
 }
+.icon.major.alt {
+  background-color: white;
+  color: black;
+}
+header i {
+  padding-right: 5px;
+}
+header h2 {
+  color: #6ccae9;
+}
+button {
+  background-color: #6ccae9;
+  color: white;
+  padding: 10px;
+  line-height: 0;
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
 #mapImage,
 #directionImage {
   overflow-anchor: none; /* prevents map from jumping down once infoWindow closes*/
   width: 100%;
   height: 500px;
   color: black;
+}
+/* footer */
+footer {
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+  border-top: 1px solid #e2e3e7;
+}
+
+footer p {
+  color: black;
+  font-size: 0.7rem;
+  margin-bottom: 0;
+  padding: 1rem 0;
+}
+footer a {
+  color: black;
+  text-decoration: none !important;
 }
 /* disable animation delay for mobile */
 @media screen and (min-width: 979px) {
