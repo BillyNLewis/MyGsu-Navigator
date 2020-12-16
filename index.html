@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyGsu Navigator</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAN1Sif8atkoWmWcfWJdG7Z7RZZxSubXxc&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/detail.css" />
+  </head>
+  <body class="landing is-preload">
+    <div id="page-wrapper">
+      <!-- Header -->
+      <header id="header" class="alt">
+        <h1><a href="index.html">MyGsu Navigator</a></h1>
+        <nav id="nav">
+          <ul>
+            <li><a href="index.html">About</a></li>
+            <li><a href="elements.html">GSU Map</a></li>
+            <li><a href="elements.html">Directions</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Banner -->
+      <section id="banner">
+        <h2>You'll Never Get Lost Again</h2>
+      </section>
+
+      <!-- One -->
+      <div class="wrapper style1">
+        <section class="container">
+          <header class="major">
+            <h2>About</h2>
+            <p>
+              Navigating an unfamiliar campus, especially one as large as
+              Georgia State can be daunting at times. But fear not! MyGsu
+              Navigator is developed to help students find their way around
+              Georgia State University. You can rely on MyGsu Navigator to
+              provide accurate step-by-step directions to classroom buildings,
+              recreation centers, libraries, housing, and dining halls from your
+              current location or another point on campus.
+            </p>
+          </header>
+        </section>
+      </div>
+
+      <!-- Two -->
+      <div class="wrapper style2">
+        <section class="container">
+          <header class="major">
+            <h2>Map Key</h2>
+          </header>
+          <div class="keyContainer">
+            <div>
+              <section class="box special">
+                <i class="icon major alt solid fa-graduation-cap"></i>
+                <h3>Classroom Building</h3>
+              </section>
+            </div>
+            <div>
+              <section class="box special">
+                <i class="icon major alt solid fa-utensils"></i>
+                <h3>Dining Hall</h3>
+              </section>
+            </div>
+            <div>
+              <section class="box special">
+                <i class="icon major alt solid fa-swimmer"></i>
+                <h3>Recreation Center</h3>
+              </section>
+            </div>
+            <div>
+              <section class="box special">
+                <i class="icon major alt solid fa-book-open"></i>
+                <h3>Library</h3>
+              </section>
+            </div>
+            <div>
+              <section class="box special">
+                <i class="icon major alt solid fa-home"></i>
+                <h3>Housing</h3>
+              </section>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Three -->
+      <div class="wrapper style3">
+        <section class="container">
+          <header class="major">
+            <h2>GSU CAMPUS MAP</h2>
+            <p>Click on icon for details.</p>
+          </header>
+          <div id="mapImage"></div>
+        </section>
+      </div>
+
+      <!-- Four -->
+      <div class="wrapper style1">
+        <section class="container medium">
+          <header class="major">
+            <h2>Contact</h2>
+            <p>
+              Aliquet ante lobortis non semper gravida. Accumsan faucibus
+              praesent ante aliquet amet posuere ac cubilia. Eu faucibus mi
+              neque adipiscing mi lorem. Semper blandit. Amet adipiscing
+              interdum.
+            </p>
+          </header>
+          <div id="contact" class="box">
+            <div class="row gtr-uniform">
+              <div class="col-7 col-12-narrower">
+                <form method="post" action="#">
+                  <div class="row gtr-uniform gtr-50">
+                    <div class="col-12">
+                      <input
+                        type="text"
+                        name="name"
+                        id="name"
+                        placeholder="Name"
+                      />
+                    </div>
+                    <div class="col-12">
+                      <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        placeholder="Email"
+                      />
+                    </div>
+                    <div class="col-12">
+                      <textarea
+                        name="message"
+                        id="message"
+                        placeholder="Message"
+                        rows="7"
+                      ></textarea>
+                    </div>
+                    <div class="col-12">
+                      <ul class="actions">
+                        <li><input type="submit" value="Send" /></li>
+                        <li>
+                          <input type="reset" class="alt" value="Reset" />
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="col-5 col-12-narrower">
+                <ul class="labeled-icons">
+                  <li>
+                    <h3 class="icon solid fa-map-marker-alt">
+                      <span class="label">Address</span>
+                    </h3>
+                    Untitled Corporation<br />
+                    1234 Somewhere Rd. Suite 5432<br />
+                    Nashville, TN 00000-0000
+                  </li>
+                  <li>
+                    <h3 class="icon solid fa-phone">
+                      <span class="label">Phone</span>
+                    </h3>
+                    (000) 000-0000 x1234
+                  </li>
+                  <li>
+                    <h3 class="icon solid fa-envelope">
+                      <span class="label">Email</span>
+                    </h3>
+                    <a href="#">information@untitled.tld</a>
+                  </li>
+                  <li>
+                    <h3 class="icon brands fa-twitter">
+                      <span class="label">Twitter</span>
+                    </h3>
+                    <a href="#">twitter.com/untitled-tld</a>
+                  </li>
+                  <li>
+                    <h3 class="icon brands fa-facebook-f">
+                      <span class="label">Facebook</span>
+                    </h3>
+                    <a href="#">facebook.com/untitled-tld</a>
+                  </li>
+                  <li>
+                    <h3 class="icon brands fa-linkedin-in">
+                      <span class="label">LinkedIn</span>
+                    </h3>
+                    <a href="#">linkedin.com/untitled-tld</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Footer -->
+      <footer id="footer">
+        <ul class="menu">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+        <div class="copyright">&copy; Untitled. All rights reserved.</div>
+      </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/map.js"></script>
+  </body>
+</html>
