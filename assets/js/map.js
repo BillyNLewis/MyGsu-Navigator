@@ -2,10 +2,13 @@
 // Initialize and add the map and map3 inside div
 let map;
 let markerArray;
+//direction map var start
 let map3;
 var directionsService;
 var directionsRenderer;
 let infoWindow;
+let icons
+//direction map var end
 function initMap() {
   // The coordinates of GSU
   const coords = {
@@ -25,12 +28,19 @@ function initMap() {
     },
     zoom: 13,
   });
+  // Start/Finish icons
+icons = {
+    start: new google.maps.MarkerImage('./assets/css/images/home.svg',
+    new google.maps.Size( 44, 32 ),new google.maps.Point( 0, 0 ),new google.maps.Point( 22, 32 )),
+    end: new google.maps.MarkerImage('./assets/css/images/swim.svg',
+    new google.maps.Size( 44, 32 ),new google.maps.Point( 0, 0 ),new google.maps.Point( 22, 32 ))
+}
   infoWindow = new google.maps.InfoWindow();
   //directionService is used to get directions. It
   //returns DirectionsResult and a DirectionsStatus.
   directionsService = new google.maps.DirectionsService();
   //DirectionsResult displays direction on map.
-  directionsRenderer = new google.maps.DirectionsRenderer();
+  directionsRenderer = new google.maps.DirectionsRenderer({suppressMarkers: true});
 
   // directionsRenderer gives us renderer ability to render map.
   directionsRenderer.setMap(map3);
@@ -245,6 +255,7 @@ function initMap() {
 // DIRECTIONS
 const directionButton = document.getElementById('directionButton');
 directionButton.addEventListener('click', checkDirRequest);
+let start,end;
 
 function checkDirRequest() {
   infoWindow.close();
@@ -259,7 +270,7 @@ function checkDirRequest() {
 }
 
 function userLocation() {
-  var userPos;
+  let userPos;
   //get user's current postion/coordinates
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(
@@ -280,6 +291,7 @@ function userLocation() {
   }
 }
 function direction(userPos) {
+    console.log('g');
   onChangeHandler();
   function onChangeHandler() {
     calculateAndDisplayRoute(directionsService, directionsRenderer);
@@ -292,7 +304,7 @@ function direction(userPos) {
       start = markerArray[start];
       start = start.coords;
     }
-    let end = document.getElementById('end').value;
+    end = document.getElementById('end').value;
     end = markerArray[end];
     end = end.coords;
 
@@ -307,13 +319,22 @@ function direction(userPos) {
       (response, status) => {
         if (status === 'OK') {
           directionsRenderer.setDirections(response);
+          let leg = response.routes[0].legs[0];
+              makeMarker( leg.start_location, icons.start);
+             makeMarker( leg.end_location, icons.end );
         } else {
           window.alert('Directions request failed due to ' + status);
         }
       }
     );
+    function makeMarker( position, icon) {
+        new google.maps.Marker({
+         position: position,
+         map: map3,
+         icon: icon,
+        });
   }
-}
+}}
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
   infoWindow.setPosition(pos);
   infoWindow.setContent(
