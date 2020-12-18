@@ -7,7 +7,8 @@ let map3;
 var directionsService;
 var directionsRenderer;
 let infoWindow;
-let icons
+let icons;
+let markers = [];
 //direction map var end
 function initMap() {
   // The coordinates of GSU
@@ -28,13 +29,7 @@ function initMap() {
     },
     zoom: 13,
   });
-  // Start/Finish icons
-icons = {
-    start: new google.maps.MarkerImage('./assets/css/images/home.svg',
-    new google.maps.Size( 44, 32 ),new google.maps.Point( 0, 0 ),new google.maps.Point( 22, 32 )),
-    end: new google.maps.MarkerImage('./assets/css/images/swim.svg',
-    new google.maps.Size( 44, 32 ),new google.maps.Point( 0, 0 ),new google.maps.Point( 22, 32 ))
-}
+
   infoWindow = new google.maps.InfoWindow();
   //directionService is used to get directions. It
   //returns DirectionsResult and a DirectionsStatus.
@@ -255,9 +250,10 @@ icons = {
 // DIRECTIONS
 const directionButton = document.getElementById('directionButton');
 directionButton.addEventListener('click', checkDirRequest);
-let start,end;
+let start,end,startPanelImg,endPanelImg;
 
 function checkDirRequest() {
+  clearMarkers(null);//clear prev markers
   infoWindow.close();
   start = document.getElementById('start').value;
   //if user request direction from their location, call userLocation();
@@ -291,7 +287,6 @@ function userLocation() {
   }
 }
 function direction(userPos) {
-    console.log('g');
   onChangeHandler();
   function onChangeHandler() {
     calculateAndDisplayRoute(directionsService, directionsRenderer);
@@ -302,11 +297,19 @@ function direction(userPos) {
       start = userPos;
     } else {
       start = markerArray[start];
+      startPanelImg = start.icon;
       start = start.coords;
     }
     end = document.getElementById('end').value;
     end = markerArray[end];
+    endPanelImg = end.icon;
     end = end.coords;
+
+      // Start and Finish icons
+    icons = {
+    start: startPanelImg,
+    end: endPanelImg
+    }   
 
     const selectedMode = document.getElementById('travelMode').value;
 
@@ -319,22 +322,43 @@ function direction(userPos) {
       (response, status) => {
         if (status === 'OK') {
           directionsRenderer.setDirections(response);
-          let leg = response.routes[0].legs[0];
-              makeMarker( leg.start_location, icons.start);
-             makeMarker( leg.end_location, icons.end );
+             makeMarker( start, icons.start);
+             makeMarker( end, icons.end );
+             setIconPanel();
         } else {
           window.alert('Directions request failed due to ' + status);
         }
       }
     );
     function makeMarker( position, icon) {
-        new google.maps.Marker({
+       let marker = new google.maps.Marker({
          position: position,
          map: map3,
          icon: icon,
         });
+        markers.push(marker);
   }
 }}
+// access markers on map and remove it by setting its map prop to null.
+function clearMarkers(map) {
+    for (let i = 0; i < markers.length; i++) {
+      markers[i].setMap(map);
+    }
+  }
+  //sets custom icon in direction panel
+  function setIconPanel() {
+    let icon1 = document.getElementsByTagName("img");
+    icon1 = document.getElementsByClassName("adp-marker2")[0];
+    let icon2 = document.getElementsByTagName("img");
+    icon2 = document.getElementsByClassName("adp-marker2")[1];
+    if(typeof icon1 !== "undefined"){
+        icon1.src = startPanelImg;
+        icon2.src = endPanelImg;
+    }
+    else{
+        setTimeout(setIconPanel, 250);
+    }
+  }
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
   infoWindow.setPosition(pos);
   infoWindow.setContent(

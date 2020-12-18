@@ -56,6 +56,9 @@ footer a {
   color: black;
   text-decoration: none !important;
 }
+/* img.adp-marker2 {
+  content: url('./assets/css/images/home.svg');
+} */
 /* disable animation delay for mobile */
 @media screen and (min-width: 979px) {
   .keyContainer {
