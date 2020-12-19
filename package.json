@@ -4,6 +4,7 @@
   "description": "gsu navigator",
   "main": "express.js",
   "scripts": {
+    "start": "node express.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Billy N. Lewis",
