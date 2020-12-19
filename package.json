@@ -1,0 +1,14 @@
+{
+  "name": "my-gsu-nav",
+  "version": "1.0.0",
+  "description": "gsu navigator",
+  "main": "express.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Billy N. Lewis",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
