@@ -295,6 +295,7 @@ function direction(userPos) {
   function calculateAndDisplayRoute(directionsService, directionsRenderer) {
     if (start === 'userLoc') {
       start = userPos;
+      startPanelImg = './assets/css/images/user.svg';
     } else {
       start = markerArray[start];
       startPanelImg = start.icon;
