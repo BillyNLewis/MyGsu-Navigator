@@ -78,7 +78,7 @@ footer a {
     column-gap: 20px;
   }
   .keyContainer section {
-    height: 100%;
+    height: 240px;
   }
   /* panel */
   #floating-panel {
